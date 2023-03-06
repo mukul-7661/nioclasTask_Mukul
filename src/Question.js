@@ -26,8 +26,23 @@ function Question({ questionID }) {
   //   loader: { load: ["input/asciimath"] },
   // };
 
+  const config = {
+    loader: { load: ["[tex]/html"] },
+    tex: {
+      packages: { "[+]": ["html"] },
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"],
+      ],
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"],
+      ],
+    },
+  };
+
   return (
-    <MathJaxContext className="question__div">
+    <MathJaxContext className="question__div" config={config}>
       <MathJax className="question">{events}</MathJax>
     </MathJaxContext>
   );
