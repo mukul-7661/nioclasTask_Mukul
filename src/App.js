@@ -28,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Nio Class</h1>
       <div className="question__numbers">
         {QuestionNumbers.map((QuestionNumber) => {
           return (
