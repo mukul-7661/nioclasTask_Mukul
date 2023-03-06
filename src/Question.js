@@ -22,12 +22,12 @@ function Question({ questionID }) {
     fetchEvents();
   }, [questionID]);
 
-  const config = {
-    loader: { load: ["input/asciimath"] },
-  };
+  // const config = {
+  //   loader: { load: ["input/asciimath"] },
+  // };
 
   return (
-    <MathJaxContext className="question__div" config={config}>
+    <MathJaxContext className="question__div">
       <MathJax className="question">{events}</MathJax>
     </MathJaxContext>
   );
