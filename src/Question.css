@@ -1,0 +1,28 @@
+.question {
+  background-color: rgb(203, 208, 208);
+  /* width: 1fr; */
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.question__div {
+  /* width: 1fr; */
+  align-items: center;
+  margin: auto;
+}
+
+@media (max-width: 650px) {
+  .question {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .question {
+    height: 150px;
+  }
+}

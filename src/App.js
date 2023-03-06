@@ -1,23 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Button from "./Button";
+import Question from "./Question";
+import Number from "./Number";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const questions = [
+    {
+      id: "AreaUnderTheCurve_901",
+    },
+    {
+      id: "BinomialTheorem_901",
+    },
+    {
+      id: "DifferentialCalculus2_901",
+    },
+  ];
+  // console.log(questions.length);
+
+  const QuestionNumbers = [];
+
+  for (let i = 0; i < questions.length; i++) {
+    QuestionNumbers.push(i);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="question__numbers">
+        {QuestionNumbers.map((QuestionNumber) => {
+          return (
+            <Number
+              QuestionNumber={QuestionNumber}
+              setCount={setCount}
+              count={count}
+            />
+          );
+        })}
+      </div>
+      {<Question questionID={questions[count].id} />}
+      <div>
+        <Button
+          title="prev"
+          count={count}
+          setCount={setCount}
+          size={questions.length}
+        ></Button>
+
+        <Button
+          title="next"
+          count={count}
+          setCount={setCount}
+          size={questions.length}
+        ></Button>
+      </div>
     </div>
   );
 }

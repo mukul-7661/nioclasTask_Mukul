@@ -1,0 +1,14 @@
+.number__button {
+  border-radius: 100%;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.number__button__colored {
+  border-radius: 100%;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: aqua;
+}

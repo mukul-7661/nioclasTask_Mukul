@@ -1,0 +1,21 @@
+.button {
+  border-radius: 20px;
+  background-color: rgb(210, 183, 222);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 50px 50px;
+}
+
+@media (max-width: 500px) {
+  .button {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  .button {
+    margin: 20px;
+    padding: 5px 10px;
+  }
+}
