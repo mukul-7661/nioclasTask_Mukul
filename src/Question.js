@@ -32,7 +32,7 @@ function Question({ questionID }) {
       packages: { "[+]": ["html"] },
       inlineMath: [
         ["$", "$"],
-        ["(", ")"],
+        ["\\(", "\\)"],
       ],
       displayMath: [
         ["$$", "$$"],
